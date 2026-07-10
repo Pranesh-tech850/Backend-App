@@ -14,7 +14,10 @@ connectDB();
 const app = express();
 
 // Middleware
-app.use(cors());
+app.use(cors({
+     origin:"https://backend-app-ebon-five.vercel.app/",
+  credentials: true
+}));
 app.use(express.json());
 
 app.get("/", (req, res) => {
